@@ -6,7 +6,7 @@ public class Deck {
     private ArrayList<Card> cards;
 
     public Deck() {
-        this.cards = new ArrayList<>();
+        this.cards = new ArrayList<Card>();
     }
 
     public int getDeckSize(){
@@ -14,6 +14,7 @@ public class Deck {
     }
 
     public void populateDeck() {
+
     }
 
 
@@ -29,11 +30,10 @@ public class Deck {
 //    }
 
     public void fill() {
-        int i = 0;
-        for (SuitType s : SuitType.values()) {
-            for (RankType r : RankType.values()) {
-                Card cards[] = new ArrayList<Card>(r,s);
-                i++;
+        for (SuitType suitType : SuitType.values()) {
+            for (RankType rankType : RankType.values()) {
+                Card cards = new Card(suitType,rankType);
+                this.cards.add(cards);
             }
         }
     }
