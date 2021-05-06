@@ -24,11 +24,7 @@ public class DeckTest {
         deck.populateDeck();
         assertEquals(52,deck.getDeckSize());
     }
-    @Test
-    public void canPopulateDeck1() {
-        deck.loadDeck1();
-        assertEquals(52,deck.getDeckSize());
-    }
+
     @Test
     public void canPopulateDeck2() {
         deck.fill();

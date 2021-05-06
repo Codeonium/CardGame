@@ -1,4 +1,3 @@
-import javax.smartcardio.Card;
 import java.util.ArrayList;
 
 public class Deck {
@@ -32,7 +31,7 @@ public class Deck {
     public void fill() {
         for (SuitType suitType : SuitType.values()) {
             for (RankType rankType : RankType.values()) {
-                Card cards = new Card(suitType,rankType);
+                Card cards = new Card(suitType, rankType);
                 this.cards.add(cards);
             }
         }
